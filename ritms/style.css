@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #444;
+    padding: 10px 0;
+    padding: 10px 0;
+    z-index: 1000;
+    
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.navbar img {
+    height: 40px; /* Ajuste a altura conforme necessário */
+}
+
+.sidebar {
+    width: 120px;
+    background-color: #555;
+    height: 100vh; /* Preenche a altura da janela */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+.sidebar .item {
+    background-color: #777;
+    margin: 10px;
+    width: 90px;   
+    height: 90px;  
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-decoration: none; 
+    overflow: hidden;
+}
+
+.sidebar .item img {
+    max-width: 100%; 
+    max-height: 100%; 
+    transition: transform 0.2s; 
+}
+
+
+
+.main-content {
+    margin-left: 140px;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 70px;
+}
+
+.sugestoes {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.grid .card {
+    background-color: #666;
+    border-radius: 10px;
+    height: 100px;
+    
+}
+
+/* Definição da animação super fluida */
+@keyframes myAnim {
+    0% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    5% {
+        opacity: 0.95;
+        transform: translateX(50px) translateY(0) scale(1.05);
+    }
+    10% {
+        opacity: 0.9;
+        transform: translateX(100px) translateY(0) scale(1.1);
+    }
+    15% {
+        opacity: 0.85;
+        transform: translateX(150px) translateY(0) scale(1.15);
+    }
+    20% {
+        opacity: 0.8;
+        transform: translateX(200px) translateY(0) scale(1.2);
+    }
+    25% {
+        opacity: 0.75;
+        transform: translateX(250px) translateY(0) scale(1.25);
+    }
+    30% {
+        opacity: 0.7;
+        transform: translateX(300px) translateY(0) scale(1.3);
+    }
+    35% {
+        opacity: 0.65;
+        transform: translateX(350px) translateY(0) scale(1.35);
+    }
+    40% {
+        opacity: 0.6;
+        transform: translateX(400px) translateY(0) scale(1.4);
+    }
+    45% {
+        opacity: 0.55;
+        transform: translateX(450px) translateY(0) scale(1.45);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(500px) translateY(0) scale(1.5);
+    }
+    55% {
+        opacity: 0.45;
+        transform: translateX(550px) translateY(0) scale(1.6);
+    }
+    60% {
+        opacity: 0.4;
+        transform: translateX(600px) translateY(0) scale(1.7);
+    }
+    65% {
+        opacity: 0.35;
+        transform: translateX(650px) translateY(0) scale(1.8);
+    }
+    70% {
+        opacity: 0.3;
+        transform: translateX(700px) translateY(0) scale(1.9);
+    }
+    75% {
+        opacity: 0.25;
+        transform: translateX(750px) translateY(0) scale(2);
+    }
+    80% {
+        opacity: 0.2;
+        transform: translateX(calc(50vw - 45px)) translateY(calc(50vh - 45px)) scale(2.5);
+    }
+    85% {
+        opacity: 0.4;
+        transform: translateX(calc(50vw - 45px)) translateY(calc(50vh - 45px)) scale(2.7);
+    }
+    90% {
+        opacity: 0.6;
+        transform: translateX(calc(50vw - 45px)) translateY(calc(50vh - 45px)) scale(2.9);
+    }
+    95% {
+        opacity: 0.8;
+        transform: translateX(calc(50vw - 45px)) translateY(calc(50vh - 45px)) scale(3);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(calc(50vw - 45px)) translateY(calc(50vh - 45px)) scale(3);
+    }
+}
+
+/* Aplicação da animação ao item ativo */
+.item.active {
+    animation: myAnim 3s ease-in-out 0s 1 normal forwards; /* Animação ainda mais suave e fluida */
+    background-color: transparent; /* Cor de fundo ajustável */
+    /* Outros estilos para o estado ativo, se necessário */
+}
+
+
+
+
+
+
+
+
+
